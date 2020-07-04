@@ -175,12 +175,15 @@ function adddata(col) {
         x.className = x.className.replace("show", "");
       }, 3000);
 
+
+
     } else {
 
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
       $("#wrapper").toggleClass("toggled");
     }
+    document.getElementById("intro").innerHTML = "";
 }
 
 
