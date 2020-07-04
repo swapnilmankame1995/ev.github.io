@@ -149,30 +149,44 @@ function adddata(col) {
       var card = document.createElement('div');
 
       card.innerHTML = '<div class="col-md-4">' +
-      '<div class="thumbnail">' +
-      '<div class="card" style="width: 18rem;">' +
-      '<div class="card-body">' +
-      '<h5 class="card-title">' + names[i] + ' </h5>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
-      '<p class="card-text">' + discs[i] + '</p>' +
-      '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
-      '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
-      '</div>' +
-      '</div>' +
-      '</div>' +
-      '</div>';
+        '<div class="thumbnail">' +
+        '<div class="card" style="width: 18rem;">' +
+        '<div class="card-body">' +
+        '<h5 class="card-title">' + names[i] + ' </h5>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
+        '<p class="card-text">' + discs[i] + '</p>' +
+        '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
+        '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
 
       document.getElementById("contactcard").appendChild(card);
 
     }
+
+    if (arrayLength == 0) {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function() {
+        x.className = x.className.replace("show", "");
+      }, 3000);
+
+    } else {
+
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      $("#wrapper").toggleClass("toggled");
+    }
+}
+
+
   });
 
 
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (isMobile) {
-  $("#wrapper").toggleClass("toggled");
-}
+
 
 }
