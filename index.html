@@ -21,21 +21,20 @@
   <script src="js/RGraph.common.key.js"></script>
 
 
-<script src="https://spreadsheets.google.com/feeds/cells/1aomvxFyWb1XN8tFJ_lNT_t0yWgmMqupaGCXttZhDweA/1/public/full?alt=json-in-script&callback=__rgraph_JSONPCallback"></script>
+  <!-- <script src="https://spreadsheets.google.com/feeds/cells/1aomvxFyWb1XN8tFJ_lNT_t0yWgmMqupaGCXttZhDweA/1/public/full?alt=json-in-script&callback=__rgraph_JSONPCallback"></script> -->
 
   <script>
     // Create a new RGraph Sheets object using the spreadsheet's key and
     // the callback function that creates the chart. The RGraph.Sheets object is
     // passed to the callback function as an argument so it doesn't need to be
     // assigned to a variable when it's created
+    console.log("hello");
     new RGraph.Sheets('1aomvxFyWb1XN8tFJ_lNT_t0yWgmMqupaGCXttZhDweA', function(sheet) {
-var data = sheet.get('A1');
-console.log(data);
+      var data = sheet.get('A1');
+      console.log(data);
     });
+
   </script>
-
-
-
 
 
 
@@ -65,11 +64,6 @@ console.log(data);
           '</div>' +
           '</div>';
 
-
-
-        //document.getElementById("contactcard").appendChild(card);
-
-
         document.getElementById("contactcard").appendChild(card);
 
       }
@@ -77,11 +71,10 @@ console.log(data);
 
     }
   </script>
-  <!-- ---------------------------------------Card script------------------------ -->
 
 </head>
 
-<body>
+<body >
 
   <div class="d-flex" id="wrapper">
 
