@@ -168,4 +168,5 @@ function adddata(col) {
 
     }
   });
+  $("#wrapper").toggleClass("toggled");
 }

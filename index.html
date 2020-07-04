@@ -36,11 +36,11 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Component Catagories</div>
       <div class="list-group list-group-flush">
-        <a href="#" onclick="adddata('I')" class="list-group-item list-group-item-action bg-light">Heating, ventilation, and air conditioning</a>
+        <a href="#" onclick="adddata('I')" data-target="#sidenav-collapse-main" data-toggle="collapse" class="list-group-item list-group-item-action bg-light">Heating, ventilation, and air conditioning</a>
         <a href="#" onclick="adddata('j')" class="list-group-item list-group-item-action bg-light">Electric Compressor</a>
         <a href="#" onclick="adddata()" class="list-group-item list-group-item-action bg-light"></a>
 
-        <a href="#" onclick="adddata('k')" class="list-group-item list-group-item-action bg-light">2W Wheel Rims</a>
+        <a href="#" onclick="adddata('k')" class="list-group-item list-group-item-action bg-light" >2W Wheel Rims</a>
         <a href="#" onclick="adddata('l')" class="list-group-item list-group-item-action bg-light">3W Wheel Rims</a>
         <a href="#" onclick="adddata('m')" class="list-group-item list-group-item-action bg-light">3W Suspension Sys</a>
         <a href="#" onclick="adddata('n')" class="list-group-item list-group-item-action bg-light">2W Suspension Sys</a>
@@ -153,7 +153,8 @@
       <div class="container-fluid">
         <h1 class="mt-4">Welcome to EV Supplier Finder</h1>
         <p>Hello there! this Comprehencive database was made for the Electric Mobility and solar community! This is a simple and light interface that gives out supplier information for your super specific EV needs without any unnecessary distractions or
-          advertisements</p>
+          advertisements
+        </p>
 
 
 
@@ -179,6 +180,7 @@
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
+      
     });
   </script>
 
