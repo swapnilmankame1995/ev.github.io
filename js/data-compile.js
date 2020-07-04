@@ -173,7 +173,7 @@ function adddata(col) {
       x.className = "show";
       setTimeout(function() {
         x.className = x.className.replace("show", "");
-      }, 3000);
+      }, 2000);
 
 
 
@@ -183,9 +183,9 @@ function adddata(col) {
     if (isMobile) {
       $("#wrapper").toggleClass("toggled");
     }
-    document.getElementById("intro").innerHTML = "";
-}
 
+}
+document.getElementById("intro").innerHTML = "";
 
   });
 
