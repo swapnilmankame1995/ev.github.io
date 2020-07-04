@@ -8,13 +8,75 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <title>EV Suppliers</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <script src="js/RGraph.common.core.js"></script>
+  <script src="js/RGraph.common.sheets.js"></script>
+  <script src="js/RGraph.common.key.js"></script>
+
+
+<script src="https://spreadsheets.google.com/feeds/cells/1aomvxFyWb1XN8tFJ_lNT_t0yWgmMqupaGCXttZhDweA/1/public/full?alt=json-in-script&callback=__rgraph_JSONPCallback"></script>
+
+  <script>
+    // Create a new RGraph Sheets object using the spreadsheet's key and
+    // the callback function that creates the chart. The RGraph.Sheets object is
+    // passed to the callback function as an argument so it doesn't need to be
+    // assigned to a variable when it's created
+    new RGraph.Sheets('1aomvxFyWb1XN8tFJ_lNT_t0yWgmMqupaGCXttZhDweA', function(sheet) {
+var data = sheet.get('A1');
+console.log(data);
+    });
+  </script>
+
+
+
+
+
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <script>
+    var i;
+
+    function addCode() {
+      var name = "Swapnil";
+      for (i = 0; i < 10; i++) {
+
+        var card = document.createElement('div');
+
+        card.innerHTML = '<div class="col-md-4">' +
+          '<div class="thumbnail">' +
+          '<div class="card" style="width: 18rem;">' +
+          '<div class="card-body">' +
+          '<h5 class="card-title">' + i + ' </h5>' +
+          '<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>' +
+          '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>' +
+          '<a href="#" class="card-link">Card link</a>' +
+          '<a href="#" class="card-link">Another link</a>' +
+          '</div>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+
+
+
+        //document.getElementById("contactcard").appendChild(card);
+
+
+        document.getElementById("contactcard").appendChild(card);
+
+      }
+
+
+    }
+  </script>
+  <!-- ---------------------------------------Card script------------------------ -->
 
 </head>
 
@@ -30,7 +92,7 @@
         <a href="#" class="list-group-item list-group-item-action bg-light">Electric Compressor</a>
         <a href="#" class="list-group-item list-group-item-action bg-light"></a>
 
-        <a href="#" class="list-group-item list-group-item-action bg-light">2W Wheel Rims</a>
+        <a href="#" onclick="addCode()" class="list-group-item list-group-item-action bg-light">2W Wheel Rims</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">3W Wheel Rims</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">3W Suspension Sys</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">2W Suspension Sys</a>
@@ -76,6 +138,7 @@
 
         <a href="#" class="list-group-item list-group-item-action bg-light">Onboard Charger</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">External Charger</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Charging Station</a>
         <a href="#" class="list-group-item list-group-item-action bg-light"></a>
 
         <a href="#" class="list-group-item list-group-item-action bg-light">2W Instrument Panel</a>
@@ -96,7 +159,7 @@
         <a href="#" class="list-group-item list-group-item-action bg-light">Assembled L5 E-Cart</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Assembled L5 E-Rikshaw</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">M1,M2,M3,N1 Vehicles</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">2W Plastic Body Panels</a>
+
 
 
 
@@ -135,7 +198,7 @@
             </li>
           </ul> -->
 
-          <button class="btn btn-primary" id="menu-toggle">Add Supplier</button>
+            <button class="btn btn-primary" id="menu-toggle">Add Supplier</button>
 
         </div>
       </nav>
@@ -144,6 +207,16 @@
         <h1 class="mt-4">Welcome to EV Supplier Database</h1>
         <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+
+        <button onclick="addCode()">Add Stuff</button>
+
+
+        <div class="row" id="contactcard">
+
+        </div>
+
+
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -156,12 +229,19 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Menu Toggle Script -->
+
+
+
   <script>
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
   </script>
+
+
+
+
 
 </body>
 
