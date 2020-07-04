@@ -60,7 +60,6 @@ RGraph = window.RGraph || {
       };
       var scriptNode = document.createElement('script');
       scriptNode.src = url;
-      console.log(scriptNode);
       document.body.appendChild(scriptNode);
     };
     this.row = function(index, start) {
