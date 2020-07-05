@@ -103,3 +103,14 @@ margin-top: .5rem
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+
+
+
+@media
+{
+    .card-columns {
+        
+        column-count: 3;
+    }
+}
