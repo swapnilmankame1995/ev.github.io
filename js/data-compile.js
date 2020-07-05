@@ -186,6 +186,7 @@ document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" +
 
     }
     document.getElementById("intro").innerHTML = "";
+    document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection;
 
   });
 
