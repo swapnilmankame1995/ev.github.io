@@ -163,7 +163,9 @@ document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" +
         '<div class="card" style="width: 18rem;">' +
         '<div class="card-body">' +
         '<h5 class="card-title">' + names[i] + ' </h5>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
+
         '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
 
@@ -376,7 +378,9 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
       '<div class="card" style="width: 18rem;">' +
       '<div class="card-body">' +
       '<h5 class="card-title">' + names[i] + ' </h5>' +
+      '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
+
       '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
 
