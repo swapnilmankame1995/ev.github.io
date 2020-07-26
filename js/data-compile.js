@@ -144,7 +144,17 @@ console.log(selection);
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
 document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection;
     //console.log(selection);
+
+
+
     for (i = 0; i < arrayLength; i++) {
+
+
+          if (discs[i] == '') {
+            discs[i] = "No discription given";
+            console.log(discs[i]);
+          }
+
 
       var card = document.createElement('div');
 
@@ -156,8 +166,14 @@ document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" +
         '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
-        '<p class="card-text">' + discs[i] + '</p>' +
+
+              '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample'+i+'"'+' role="button" aria-expanded="false" aria-controls="collapseExample">Company Description</a></h6>' +
+                '<div class="collapse" id="collapseExample' + i +'">' +
+                '<p class="card-text">' + discs[i] + '</p>' +
+                '</div>' +
+
         '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
+
         '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
         '</div>' +
         '</div>' +
@@ -346,6 +362,12 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   for (i = 0; i < arrayLength; i++) {
 
     var card = document.createElement('div');
+    //console.log(discs[i]);
+
+    if (discs[i] == '') {
+      discs[i] = "No discription given";
+      console.log(discs[i]);
+    }
 
     card.innerHTML =
      '<div class="col-md-4">' +
@@ -357,7 +379,12 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
       '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
-      '<p class="card-text">' + discs[i] + '</p>' +
+
+      '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample'+i+'"'+' role="button" aria-expanded="false" aria-controls="collapseExample">Click for Company Description</a></h6>' +
+        '<div class="collapse" id="collapseExample' + i +'">' +
+        '<p class="card-text">' + discs[i] + '</p>' +
+        '</div><br>' +
+
       '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
       '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
       '</div>' +
