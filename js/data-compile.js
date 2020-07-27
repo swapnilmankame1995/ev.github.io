@@ -33,7 +33,7 @@ function adddata(col) {
 
       response.push(data);
     }
-console.log(selection);
+    console.log(selection);
     //PHASE I : RESPONSE READING STAGE END ---------------------------------------------------------------
 
     console.log("Array elements");
@@ -46,7 +46,7 @@ console.log(selection);
 
       if (value == "Yes") {
         indexpos.push(index);
-        console.log(indexpos);
+        //  console.log(indexpos);
       }
     }
     var arrayLength = indexpos.length;
@@ -141,8 +141,9 @@ console.log(selection);
       discs.push(disc);
     }
     console.log(disc);
+
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
-document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection;
+    document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection;
     //console.log(selection);
 
 
@@ -150,10 +151,11 @@ document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" +
     for (i = 0; i < arrayLength; i++) {
 
 
-          if (discs[i] == '') {
-            discs[i] = "No discription given";
-            console.log(discs[i]);
-          }
+      if (discs[i] == '') {
+        discs[i] = "No discription given";
+        console.log(discs[i]);
+      }
+
 
 
       var card = document.createElement('div');
@@ -169,10 +171,10 @@ document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" +
         '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
 
-              '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample'+i+'"'+' role="button" aria-expanded="false" aria-controls="collapseExample">Company Description</a></h6>' +
-                '<div class="collapse" id="collapseExample' + i +'">' +
-                '<p class="card-text">' + discs[i] + '</p>' +
-                '</div>' +
+        '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample' + i + '"' + ' role="button" aria-expanded="false" aria-controls="collapseExample">Company Description</a></h6>' +
+        '<div class="collapse" id="collapseExample' + i + '">' +
+        '<p class="card-text">' + discs[i] + '</p>' +
+        '</div>' +
 
         '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
 
@@ -247,7 +249,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   }
 
 
-  console.log("4 = " +response);
+  console.log("4 = " + response);
 
   var arrayLength = response.length;
   console.log("length = " + arrayLength);
@@ -271,7 +273,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
   //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY-------------
   names = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     name = sheet.get("C" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -284,7 +286,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
   //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY-------------
   var numbers = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     number = sheet.get("D" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -298,7 +300,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
   //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY-------------
   var emails = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     email = sheet.get("B" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -311,7 +313,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
   //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY-------------
   var companies = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     company = sheet.get("E" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -324,7 +326,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
   //----------------------------------COLLECT STATE WITH "YES" AS A REPLY-------------
   var states = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     state = sheet.get("F" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -337,7 +339,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
   var roles = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     role = sheet.get("G" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -349,7 +351,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
   var discs = [];
-  for (x = 2; x < arrayLength+2; x++) {
+  for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
     disc = sheet.get("H" + ([x])); //name variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
@@ -359,6 +361,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   }
   console.log(disc);
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
+  document.getElementById("loader").style.display = "none";
 
   //console.log(selection);
   for (i = 0; i < arrayLength; i++) {
@@ -371,8 +374,9 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
       console.log(discs[i]);
     }
 
+
     card.innerHTML =
-     '<div class="col-md-4">' +
+      '<div class="col-md-4">' +
 
       '<div class="thumbnail">' +
       '<div class="card" style="width: 18rem;">' +
@@ -384,10 +388,10 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
       '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
 
-      '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample'+i+'"'+' role="button" aria-expanded="false" aria-controls="collapseExample">Click for Company Description</a></h6>' +
-        '<div class="collapse" id="collapseExample' + i +'">' +
-        '<p class="card-text">' + discs[i] + '</p>' +
-        '</div><br>' +
+      '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample' + i + '"' + ' role="button" aria-expanded="false" aria-controls="collapseExample">Click for Company Description</a></h6>' +
+      '<div class="collapse" id="collapseExample' + i + '">' +
+      '<p class="card-text">' + discs[i] + '</p>' +
+      '</div><br>' +
 
       '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
       '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
