@@ -166,8 +166,7 @@ function adddata(col) {
         '<div class="card-body">' +
         '<h5 class="card-title">' + names[i] + ' </h5>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
-        '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
-
+        '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + ', ' + states[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
 
@@ -383,7 +382,8 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
       '<div class="card-body">' +
       '<h5 class="card-title">' + names[i] + ' </h5>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + '</h6>' +
+      '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + ', ' + states[i] + '</h6>' +
+      // '<h6 class="card-subtitle mb-2 text-muted">' + states[i] + '</h6>' +
 
       '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
