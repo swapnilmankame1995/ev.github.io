@@ -69,7 +69,7 @@ function adddata(col) {
     var numbers = [];
     for (x = 0; x < arrayLength; x++) {
       // loop through all rows in one column
-      number = sheet.get("D" + (indexpos[x] + 2)); //name variable stores all the name from the selected single column with a yes response
+      number = sheet.get("D" + (indexpos[x] + 2)); //number variable stores all the name from the selected single column with a yes response
       //traversing through the col until null value is reached, then break from loop
       //console.log(number);
       //console.log(data);
@@ -83,7 +83,7 @@ function adddata(col) {
     var emails = [];
     for (x = 0; x < arrayLength; x++) {
       // loop through all rows in one column
-      email = sheet.get("B" + (indexpos[x] + 2)); //name variable stores all the name from the selected single column with a yes response
+      email = sheet.get("B" + (indexpos[x] + 2)); //email  variable stores all the name from the selected single column with a yes response
       //traversing through the col until null value is reached, then break from loop
       //console.log(email);
       //console.log(data);
@@ -96,7 +96,7 @@ function adddata(col) {
     var companies = [];
     for (x = 0; x < arrayLength; x++) {
       // loop through all rows in one column
-      company = sheet.get("E" + (indexpos[x] + 2)); //name variable stores all the name from the selected single column with a yes response
+      company = sheet.get("E" + (indexpos[x] + 2)); //Company variable stores all the name from the selected single column with a yes response
       //traversing through the col until null value is reached, then break from loop
       //console.log(company);
       //console.log(data);
@@ -109,7 +109,7 @@ function adddata(col) {
     var states = [];
     for (x = 0; x < arrayLength; x++) {
       // loop through all rows in one column
-      state = sheet.get("F" + (indexpos[x] + 2)); //name variable stores all the name from the selected single column with a yes response
+      state = sheet.get("F" + (indexpos[x] + 2)); //State variable stores all the name from the selected single column with a yes response
       //traversing through the col until null value is reached, then break from loop
       //console.log(state);
       //console.log(data);
@@ -122,7 +122,7 @@ function adddata(col) {
     var roles = [];
     for (x = 0; x < arrayLength; x++) {
       // loop through all rows in one column
-      role = sheet.get("G" + (indexpos[x] + 2)); //name variable stores all the name from the selected single column with a yes response
+      role = sheet.get("G" + (indexpos[x] + 2)); //role variable stores all the name from the selected single column with a yes response
       //traversing through the col until null value is reached, then break from loop
       //console.log(role);
       //console.log(data);
@@ -134,7 +134,7 @@ function adddata(col) {
     var discs = [];
     for (x = 0; x < arrayLength; x++) {
       // loop through all rows in one column
-      disc = sheet.get("H" + (indexpos[x] + 2)); //name variable stores all the name from the selected single column with a yes response
+      disc = sheet.get("H" + (indexpos[x] + 2)); //disc variable stores all the name from the selected single column with a yes response
       //traversing through the col until null value is reached, then break from loop
       //console.log(role);
       //console.log(data);
@@ -223,7 +223,7 @@ function adddata(col) {
 
 
 
-//showing all entries in the homepage
+//showing all entries in the homepage before searching
 
 //PHASE I : RESPONSE READING STAGE ---------------------------------------------------------------
 //col = selected option from the side menu
@@ -288,7 +288,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   var numbers = [];
   for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
-    number = sheet.get("D" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    number = sheet.get("D" + ([x])); //number variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
     //console.log(number);
     //console.log(data);
@@ -302,7 +302,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   var emails = [];
   for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
-    email = sheet.get("B" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    email = sheet.get("B" + ([x])); //email variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
     //console.log(email);
     //console.log(data);
@@ -315,7 +315,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   var companies = [];
   for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
-    company = sheet.get("E" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    company = sheet.get("E" + ([x])); //company variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
     //console.log(company);
     //console.log(data);
@@ -328,7 +328,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   var states = [];
   for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
-    state = sheet.get("F" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    state = sheet.get("F" + ([x])); //state variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
     //console.log(state);
     //console.log(data);
@@ -341,7 +341,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   var roles = [];
   for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
-    role = sheet.get("G" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    role = sheet.get("G" + ([x])); //role variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
     //console.log(role);
     //console.log(data);
@@ -353,7 +353,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   var discs = [];
   for (x = 2; x < arrayLength + 2; x++) {
     // loop through all rows in one column
-    disc = sheet.get("H" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    disc = sheet.get("H" + ([x])); //discs variable stores all the name from the selected single column with a yes response
     //traversing through the col until null value is reached, then break from loop
     //console.log(role);
     //console.log(data);
