@@ -205,7 +205,7 @@ function adddata(col) {
 
     }
     document.getElementById("intro").innerHTML = "";
-    document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection;
+    document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection + "  " + '<br><button  class="btn btn-secondary btn-sm" onClick="window.location.reload()"><span style="color:#ffffff00">---</span>Reset Filter<span style="color:#ffffff00">---</span></button>';
 
   });
 
