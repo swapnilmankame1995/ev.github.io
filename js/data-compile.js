@@ -171,31 +171,38 @@ function adddata(col) {
         waNumber = waNumberRaw;
       }
       waNumberFinal = parseInt(waNumber, 10);
-      card.innerHTML = '<div class="col-md-4">' +
-        '<div class="thumbnail">' +
-        '<div class="card shadow-sm" style="width: 18rem;">' +
-        '<div class="card-body">' +
-        '<h5 class="card-title">' + names[i] + ' </h5>' +
-        '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
-        '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + ', ' + states[i] + '</h6>' +
-        '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
-        '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
+      card.innerHTML =
 
-        '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample' + i + '"' + ' role="button" aria-expanded="false" aria-controls="collapseExample">Company Description</a></h6>' +
-        '<div class="collapse" id="collapseExample' + i + '">' +
-        '<p class="card-text">' + discs[i] + '</p>' +
-        '</div>' +
+      '<div class="col-md-4  ">' +
 
-        '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
+      '<div class="thumbnail  ">' +
 
-        '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
-        '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
+      '<div class="card shadow-sm" style="width: 18rem;">' +
+      '<div class="card-body">' +
+      '<h5 class="card-title">' + names[i] + ' </h5>' +
+      '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
+      '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + ', ' + states[i] + '</h6>' +
+      // '<h6 class="card-subtitle mb-2 text-muted">' + states[i] + '</h6>' +
 
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+      '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
+      '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
 
+      '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample' + i + '"' + ' role="button" aria-expanded="false" aria-controls="collapseExample">Click for Company Description</a></h6>' +
+      '<div class="collapse" id="collapseExample' + i + '">' +
+      '<p class="card-text">' + discs[i] + '</p>' +
+      '</div><br>' +
+
+
+      '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
+      '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
+      '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
+
+
+
+      '</div>' +
+      '</div>' +
+      '</div>' +
+      '</div>';
       document.getElementById("contactcard").appendChild(card);
 
     }
