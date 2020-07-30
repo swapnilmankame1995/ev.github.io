@@ -1,3 +1,4 @@
+
 var name;
 var number;
 var email;
@@ -172,7 +173,7 @@ function adddata(col) {
       waNumberFinal = parseInt(waNumber, 10);
       card.innerHTML = '<div class="col-md-4">' +
         '<div class="thumbnail">' +
-        '<div class="card" style="width: 18rem;">' +
+        '<div class="card shadow-sm" style="width: 18rem;">' +
         '<div class="card-body">' +
         '<h5 class="card-title">' + names[i] + ' </h5>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
@@ -399,10 +400,12 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     waNumberFinal = parseInt(waNumber, 10);
     // console.log(waNumberFinal);
     card.innerHTML =
-      '<div class="col-md-4">' +
 
-      '<div class="thumbnail">' +
-      '<div class="card" style="width: 18rem;">' +
+      '<div class="col-md-4  ">' +
+
+      '<div class="thumbnail  ">' +
+
+      '<div class="card shadow-sm" style="width: 18rem;">' +
       '<div class="card-body">' +
       '<h5 class="card-title">' + names[i] + ' </h5>' +
       '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
@@ -417,9 +420,11 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
       '<p class="card-text">' + discs[i] + '</p>' +
       '</div><br>' +
 
+
       '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
       '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
       '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
+
 
 
       '</div>' +
