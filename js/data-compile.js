@@ -159,7 +159,18 @@ function adddata(col) {
 
 
       var card = document.createElement('div');
+      var waNumber
+      var waNumberRaw = parseInt(numbers[i], 10);
+      //console.log(waNumberRaw);
+      if (waNumberRaw.toString().length < 12) {
+        waNumber = "91" + waNumberRaw;
+        //console.log(waNumber);
 
+      } else {
+        waNumber = waNumberRaw;
+
+      }
+      waNumberFinal = parseInt(waNumber, 10);
       card.innerHTML = '<div class="col-md-4">' +
         '<div class="thumbnail">' +
         '<div class="card" style="width: 18rem;">' +
@@ -178,6 +189,8 @@ function adddata(col) {
         '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
 
         '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
+        '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
+
         '</div>' +
         '</div>' +
         '</div>' +
