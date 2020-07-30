@@ -62,7 +62,7 @@ function adddata(col) {
       //console.log(data);
       names.push(name);
     }
-    console.log(names);
+    //console.log(names); // print names in console
     //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY END-------
 
     //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY-------------
@@ -75,7 +75,7 @@ function adddata(col) {
       //console.log(data);
       numbers.push(number);
     }
-    console.log(numbers);
+    //console.log(numbers); //print numbers in console
     //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY END-------
 
 
@@ -89,7 +89,7 @@ function adddata(col) {
       //console.log(data);
       emails.push(email);
     }
-    console.log(emails);
+    //console.log(emails); //print emails in console
     //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY END-------
 
     //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY-------------
@@ -102,7 +102,7 @@ function adddata(col) {
       //console.log(data);
       companies.push(company);
     }
-    console.log(companies);
+    console.log(companies); // print companies in console
     //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY END-------
 
     //----------------------------------COLLECT STATE WITH "YES" AS A REPLY-------------
@@ -115,7 +115,7 @@ function adddata(col) {
       //console.log(data);
       states.push(state);
     }
-    console.log(states);
+    // console.log(states); // print states in console
     //----------------------------------COLLECT STATE WITH "YES" AS A REPLY END-------
 
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
@@ -128,7 +128,7 @@ function adddata(col) {
       //console.log(data);
       roles.push(role);
     }
-    console.log(roles);
+    // console.log(roles); //print company roles in console
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
     var discs = [];
@@ -140,7 +140,7 @@ function adddata(col) {
       //console.log(data);
       discs.push(disc);
     }
-    console.log(disc);
+    // console.log(disc); // print description to console
 
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
     document.getElementById("intro").innerHTML = "<h7><i>All entries for</i></h7>" + " " + selection;
@@ -168,7 +168,6 @@ function adddata(col) {
 
       } else {
         waNumber = waNumberRaw;
-
       }
       waNumberFinal = parseInt(waNumber, 10);
       card.innerHTML = '<div class="col-md-4">' +
@@ -293,7 +292,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     names.push(name);
   }
-  console.log(names);
+  // console.log(names);
   //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY END-------
 
   //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY-------------
@@ -306,7 +305,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     numbers.push(number);
   }
-  console.log(numbers);
+  // console.log(numbers);
   //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY END-------
 
 
@@ -320,7 +319,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     emails.push(email);
   }
-  console.log(emails);
+  // console.log(emails);
   //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY END-------
 
   //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY-------------
@@ -333,7 +332,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     companies.push(company);
   }
-  console.log(companies);
+  // console.log(companies);
   //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY END-------
 
   //----------------------------------COLLECT STATE WITH "YES" AS A REPLY-------------
@@ -346,7 +345,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     states.push(state);
   }
-  console.log(states);
+  // console.log(states);
   //----------------------------------COLLECT STATE WITH "YES" AS A REPLY END-------
 
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
@@ -359,7 +358,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     roles.push(role);
   }
-  console.log(roles);
+  // console.log(roles);
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
   var discs = [];
@@ -371,7 +370,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
     //console.log(data);
     discs.push(disc);
   }
-  console.log(disc);
+  // console.log(disc);
   //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
   document.getElementById("loader").style.display = "none";
 
@@ -398,7 +397,7 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
     }
     waNumberFinal = parseInt(waNumber, 10);
-    console.log(waNumberFinal);
+    // console.log(waNumberFinal);
     card.innerHTML =
       '<div class="col-md-4">' +
 
