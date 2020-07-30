@@ -370,10 +370,22 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
     if (discs[i] == '') {
       discs[i] = "No discription given";
-      console.log(discs[i]);
+      //console.log(discs[i]);
     }
 
+    var waNumber
+    var waNumberRaw = parseInt(numbers[i], 10);
+    //console.log(waNumberRaw);
+    if (waNumberRaw.toString().length < 12){
+       waNumber = "91" + waNumberRaw;
+      //console.log(waNumber);
 
+    } else {
+       waNumber =  waNumberRaw;
+
+    }
+    waNumberFinal = parseInt(waNumber, 10);
+    console.log(waNumberFinal);
     card.innerHTML =
       '<div class="col-md-4">' +
 
@@ -395,6 +407,9 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
 
       '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
       '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
+      '<a href="https://wa.me/'+waNumber+'" class="card-link">Whatsapp Text</a>' +
+
+
       '</div>' +
       '</div>' +
       '</div>' +
