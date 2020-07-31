@@ -268,11 +268,13 @@ new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet
   }
 
 
-  console.log("4 = " + response);
+  // console.log("4 = " + response);
 
   var arrayLength = response.length;
-  console.log("length = " + arrayLength);
-  //
+  // console.log("length = " + arrayLength);
+
+
+
   // //PHASE I : RESPONSE READING STAGE END ---------------------------------------------------------------
   //
   // console.log("Array elements");
