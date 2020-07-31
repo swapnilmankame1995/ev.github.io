@@ -14,4 +14,4 @@ $(document).ready(function() {
     return false;
   });
 });
-console.log("i am here");
+console.log("All rights Reserved to Swapnil Mankame");
