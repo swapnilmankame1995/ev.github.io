@@ -395,7 +395,7 @@ function adddata(col) {
 
         '<div class="col-md-4  ">' +
         '<div class="thumbnail  ">' +
-        '<div class="card shadow-sm" style="width: 18rem;">' +
+        '<div class="card shadow" style="width: 18rem;">' +
         '<div class="card-body">' +
         '<h5 class="card-title">' + names[i] + ' </h5>' +
         '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
