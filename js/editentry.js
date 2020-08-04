@@ -67,8 +67,8 @@ function editResponce() {
       '<br />' +
       'Regards<br />' +
       'Swapnil Mankame<br />'+
-      'CEO Mankame Automotive<br />''+
-      'R&D Head eMatrixMile<br />''+
+      'CEO Mankame Automotive<br />'+
+      'R&D Head eMatrixMile<br />'+
       '</body>' +
       '</html>';
 
