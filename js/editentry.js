@@ -66,9 +66,9 @@ function editResponce() {
       'Thank you for showing your support<br />' +
       '<br />' +
       'Regards<br />' +
-      'Swapnil Mankame<br />'
-      'CEO Mankame Automotive'+
-      'R&D Head eMatrixMile'+
+      'Swapnil Mankame<br />'+
+      'CEO Mankame Automotive<br />''+
+      'R&D Head eMatrixMile<br />''+
       '</body>' +
       '</html>';
 
