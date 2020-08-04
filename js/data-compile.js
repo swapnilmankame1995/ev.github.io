@@ -1,3 +1,6 @@
+//  Created by Swapnil Mankame
+//  Copyright 2020. All rights reserved.
+
 var name;
 var number;
 var email;
@@ -36,6 +39,7 @@ function adddata(col) {
       response.push(data);
     }
     console.log(selection);
+
     //PHASE I : RESPONSE READING STAGE END ---------------------------------------------------------------
 
     console.log("Array elements");
@@ -149,7 +153,7 @@ function adddata(col) {
 
       if (discs[i] == '') {
         discs[i] = "No discription given";
-        console.log(discs[i]);
+        // console.log(discs[i]);
       }
 
 
@@ -186,12 +190,9 @@ function adddata(col) {
         '<p class="card-text">' + discs[i] + '</p>' +
         '</div><br>' +
 
-
         '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
         '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
         '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
-
-
 
         '</div>' +
         '</div>' +
@@ -235,7 +236,7 @@ function adddata(col) {
 
 
 
-  //showing all entries in the homepage before searching
+  //showing all entries in the homepage before Filtering -----------------------------------------------------------------
 
   //PHASE I : RESPONSE READING STAGE ---------------------------------------------------------------
   //col = selected option from the side menu
@@ -264,27 +265,6 @@ function adddata(col) {
     // console.log("4 = " + response);
 
     var arrayLength = response.length;
-    // console.log("length = " + arrayLength);
-    // console.log(arrayLength);
-
-
-
-    // //PHASE I : RESPONSE READING STAGE END ---------------------------------------------------------------
-    //
-    // console.log("Array elements");
-    // console.log(data);
-    // indexpos = [];
-    // response.forEach(nameFilter);
-    //
-    //
-    // function nameFilter(value, index, array) {
-    //
-    //   if (value == "Yes") {
-    //     indexpos.push(index);
-    //     console.log(indexpos);
-    //   }
-    // }
-    //
 
     //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY-------------
     names = [];
@@ -383,8 +363,6 @@ function adddata(col) {
       responceURLs.push(respURl);
     }
 
-    // console.log("https://docs.google.com/forms/d/e/1FAIpQLSec9MJ-ojFs57cVtw8-u002fpy05HRaZUqbWhgS1BsYKyX0Og/viewform?edit2=2_ABaOnufNquG5RuIZJ6vsJtef3t-bFDSjxWeXOWfNnf3HaVKZpZ-T7uhnY_hQZCFjH0mGJOY");
-
 
     //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
     document.getElementById("loader").style.display = "none";
@@ -413,7 +391,6 @@ function adddata(col) {
 
       }
       waNumberFinal = parseInt(waNumber, 10);
-      // console.log(waNumberFinal);
       card.innerHTML =
 
         '<div class="col-md-4  ">' +
@@ -451,6 +428,5 @@ function adddata(col) {
 
 
     }
-    // document.getElementById("intro").innerHTML = "";
 
   });

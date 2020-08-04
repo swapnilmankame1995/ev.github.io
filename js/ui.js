@@ -1,3 +1,6 @@
+//  Created by Swapnil Mankame
+//  Copyright 2020. All rights reserved.
+
 $(document).ready(function() {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 20) {

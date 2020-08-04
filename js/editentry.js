@@ -1,9 +1,11 @@
+//  Created by Swapnil Mankame
+//  Copyright 2020. All rights reserved.
+
 function editResponce() {
   var response = [];
   var emailslst = [];
   var emailresponce = document.getElementById("InputEmail").value;
   console.log(emailresponce);
-
 
   new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet) {
     var data = [];
@@ -16,17 +18,11 @@ function editResponce() {
         // console.log(data);
         break;
       }
-
       response.push(data);
       // console.log(arrayLength);
-
     }
-
     var arrayLength = response.length;
     // --------------------------------
-
-    // console.log(arrayLength);
-
     var emails = [];
     for (x = 2; x < arrayLength + 2; x++) {
       // loop through all rows in one column
@@ -35,16 +31,7 @@ function editResponce() {
       emails.push(email);
     }
 
-
-
-
-
-
-
-
     response.forEach(nameFilter);
-
-
     function nameFilter(currentElement, index, array) {
       // console.log(emailresponce);
       if (emailresponce == currentElement) {
@@ -61,15 +48,8 @@ function editResponce() {
       // loop through all rows in one column
       respURl = sheet.get("BL" + ([x])); //disc variable stores all the name from the selected single column with a yes response
       // console.log(indexpos[x] + 2);
-
-
       responceURLs.push(respURl);
     }
-
-
-    // console.log(responceURLs[indexpos]);
-    // console.log(emails[indexpos]);
-
 
     var emailBody =
       '<html>' +
@@ -86,10 +66,11 @@ function editResponce() {
       'Thank you for showing your support<br />' +
       '<br />' +
       'Regards<br />' +
-      'Swapnil Mankame</body>' +
+      'Swapnil Mankame<br />'
+      'CEO Mankame Automotive'+
+      'R&D Head eMatrixMile'+
+      '</body>' +
       '</html>';
-
-
 
       Email.send({
         SecureToken: "8bb3ffd7-a6ac-4652-8eff-774ee05ed50d",
@@ -101,7 +82,6 @@ function editResponce() {
         message => alert("Email Sent, Check your registered mail for the edit link")
 
       );
-
 
   });
 
