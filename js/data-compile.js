@@ -11,6 +11,9 @@ var i;
 var x;
 var indexpos = [];
 var names = [];
+var respURl;
+
+
 
 function adddata(col) {
   //adddata() is called when a option is clicked from the sidebar
@@ -27,7 +30,7 @@ function adddata(col) {
       // loop through all rows in one column
       data = sheet.get(col + row); //data variable stores all the values from the selected single column
       if (data == null) {
-        break;       //traversing through the col until null value is reached, then break from loop
+        break; //traversing through the col until null value is reached, then break from loop
       }
 
       response.push(data);
@@ -232,212 +235,222 @@ function adddata(col) {
 
 
 
+  //showing all entries in the homepage before searching
 
-//showing all entries in the homepage before searching
+  //PHASE I : RESPONSE READING STAGE ---------------------------------------------------------------
+  //col = selected option from the side menu
+  var response = [];
 
-//PHASE I : RESPONSE READING STAGE ---------------------------------------------------------------
-//col = selected option from the side menu
-var response = [];
+  new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet) {
+    var data = [];
+    // console.log("1 " +data);
 
-new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet) {
-  var data = [];
-  // console.log("1 " +data);
+    for (row = 2; data !== null; row++) {
+      // loop through all rows in one column
+      data = sheet.get("C" + row); //data variable stores all the values from the selected single column
+      //traversing through the col until null value is reached, then break from loop
+      // console.log("2 = " +data);
 
-  for (row = 2; data !== null; row++) {
-    // loop through all rows in one column
-    data = sheet.get("C" + row); //data variable stores all the values from the selected single column
-    //traversing through the col until null value is reached, then break from loop
-    // console.log("2 = " +data);
+      if (data == null) {
+        break;
+      }
+      // console.log("3 = " +data);
 
-    if (data == null) {
-      break;
+
+      response.push(data);
     }
-    // console.log("3 = " +data);
 
 
-    response.push(data);
-  }
+    // console.log("4 = " + response);
 
-
-  // console.log("4 = " + response);
-
-  var arrayLength = response.length;
-  // console.log("length = " + arrayLength);
+    var arrayLength = response.length;
+    // console.log("length = " + arrayLength);
+    // console.log(arrayLength);
 
 
 
-  // //PHASE I : RESPONSE READING STAGE END ---------------------------------------------------------------
-  //
-  // console.log("Array elements");
-  // console.log(data);
-  // indexpos = [];
-  // response.forEach(nameFilter);
-  //
-  //
-  // function nameFilter(value, index, array) {
-  //
-  //   if (value == "Yes") {
-  //     indexpos.push(index);
-  //     console.log(indexpos);
-  //   }
-  // }
-  //
+    // //PHASE I : RESPONSE READING STAGE END ---------------------------------------------------------------
+    //
+    // console.log("Array elements");
+    // console.log(data);
+    // indexpos = [];
+    // response.forEach(nameFilter);
+    //
+    //
+    // function nameFilter(value, index, array) {
+    //
+    //   if (value == "Yes") {
+    //     indexpos.push(index);
+    //     console.log(indexpos);
+    //   }
+    // }
+    //
 
-  //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY-------------
-  names = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    name = sheet.get("C" + ([x])); //name variable stores all the name from the selected single column with a yes response
+    //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY-------------
+    names = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      name = sheet.get("C" + ([x])); //name variable stores all the name from the selected single column with a yes response
 
-    names.push(name);
-  }
-  // console.log(names);
-  //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY END-------
+      names.push(name);
+    }
+    // console.log(names);
+    //----------------------------------COLLECT NAMES WITH "YES" AS A REPLY END-------
 
-  //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY-------------
-  var numbers = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    number = sheet.get("D" + ([x])); //number variable stores all the name from the selected single column with a yes response
+    //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY-------------
+    var numbers = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      number = sheet.get("D" + ([x])); //number variable stores all the name from the selected single column with a yes response
 
-    numbers.push(number);
-  }
-  // console.log(numbers);
-  //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY END-------
+      numbers.push(number);
+    }
+    // console.log(numbers);
+    //----------------------------------COLLECT NUMBERS WITH "YES" AS A REPLY END-------
 
 
-  //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY-------------
-  var emails = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    email = sheet.get("B" + ([x])); //email variable stores all the name from the selected single column with a yes response
+    //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY-------------
+    var emails = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      email = sheet.get("B" + ([x])); //email variable stores all the name from the selected single column with a yes response
 
-    emails.push(email);
-  }
-  // console.log(emails);
-  //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY END-------
+      emails.push(email);
+    }
+    // console.log(emails);
+    //----------------------------------COLLECT EMAIL WITH "YES" AS A REPLY END-------
 
-  //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY-------------
-  var companies = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    company = sheet.get("E" + ([x])); //company variable stores all the name from the selected single column with a yes response
+    //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY-------------
+    var companies = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      company = sheet.get("E" + ([x])); //company variable stores all the name from the selected single column with a yes response
 
-    companies.push(company);
-  }
-  // console.log(companies);
-  //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY END-------
+      companies.push(company);
+    }
+    // console.log(companies);
+    //----------------------------------COLLECT COMPANY WITH "YES" AS A REPLY END-------
 
-  //----------------------------------COLLECT STATE WITH "YES" AS A REPLY-------------
-  var states = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    state = sheet.get("F" + ([x])); //state variable stores all the name from the selected single column with a yes response
+    //----------------------------------COLLECT STATE WITH "YES" AS A REPLY-------------
+    var states = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      state = sheet.get("F" + ([x])); //state variable stores all the name from the selected single column with a yes response
 
-    states.push(state);
-  }
-  // console.log(states);
-  //----------------------------------COLLECT STATE WITH "YES" AS A REPLY END-------
+      states.push(state);
+    }
+    // console.log(states);
+    //----------------------------------COLLECT STATE WITH "YES" AS A REPLY END-------
 
-  //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
-  var roles = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    role = sheet.get("G" + ([x])); //role variable stores all the name from the selected single column with a yes response
+    //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
+    var roles = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      role = sheet.get("G" + ([x])); //role variable stores all the name from the selected single column with a yes response
 
-    roles.push(role);
-  }
-  // console.log(roles);
-  //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
-  //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
-  var discs = [];
-  for (x = 2; x < arrayLength + 2; x++) {
-    // loop through all rows in one column
-    disc = sheet.get("H" + ([x])); //discs variable stores all the name from the selected single column with a yes response
+      roles.push(role);
+    }
+    // console.log(roles);
+    //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
+    //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY-------------
+    var discs = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      disc = sheet.get("H" + ([x])); //discs variable stores all the name from the selected single column with a yes response
 
-    discs.push(disc);
-  }
-  // console.log(disc);
+      discs.push(disc);
+    }
+    // console.log(disc);
 
-  var websites = [];
-  for (x = 0; x < arrayLength; x++) {
-    // loop through all rows in one column
-    website = sheet.get("BK" + (indexpos[x] + 2)); //disc variable stores all the name from the selected single column with a yes response
+    var websites = [];
+    for (x = 2; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      website = sheet.get("BK" + ([x])); //disc variable stores all the name from the selected single column with a yes response
+      // console.log(indexpos[x] + 2);
 
-    websites.push(website);
-  }
-  //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
-  document.getElementById("loader").style.display = "none";
+      websites.push(website);
+    }
+    // console.log(websites);
 
-  for (i = 0; i < arrayLength; i++) {
+    var responceURLs = [];
+    for (x = 02; x < arrayLength + 2; x++) {
+      // loop through all rows in one column
+      respURl = sheet.get("BL" + ([x])); //disc variable stores all the name from the selected single column with a yes response
+      // console.log(indexpos[x] + 2);
 
-    var card = document.createElement('div');
-    //console.log(discs[i]);
+      // console.log(respURl);
 
-    if (discs[i] == '') {
-      discs[i] = "No discription given";
+      responceURLs.push(respURl);
+    }
+
+    // console.log("https://docs.google.com/forms/d/e/1FAIpQLSec9MJ-ojFs57cVtw8-u002fpy05HRaZUqbWhgS1BsYKyX0Og/viewform?edit2=2_ABaOnufNquG5RuIZJ6vsJtef3t-bFDSjxWeXOWfNnf3HaVKZpZ-T7uhnY_hQZCFjH0mGJOY");
+
+
+    //----------------------------------COLLECT ROLE WITH "YES" AS A REPLY END-------
+    document.getElementById("loader").style.display = "none";
+
+    for (i = 0; i < arrayLength; i++) {
+
+      var card = document.createElement('div');
       //console.log(discs[i]);
+
+
+
+      if (discs[i] == '') {
+        discs[i] = "No discription given";
+        //console.log(discs[i]);
+      }
+
+      var waNumber
+      var waNumberRaw = parseInt(numbers[i], 10);
+      //console.log(waNumberRaw);
+      if (waNumberRaw.toString().length < 12) {
+        waNumber = "91" + waNumberRaw;
+        //console.log(waNumber);
+
+      } else {
+        waNumber = waNumberRaw;
+
+      }
+      waNumberFinal = parseInt(waNumber, 10);
+      // console.log(waNumberFinal);
+      card.innerHTML =
+
+        '<div class="col-md-4  ">' +
+        '<div class="thumbnail  ">' +
+        '<div class="card shadow-sm" style="width: 18rem;">' +
+        '<div class="card-body">' +
+        '<h5 class="card-title">' + names[i] + ' </h5>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + ', ' + states[i] + '</h6>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
+        '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample' + i + '"' + ' role="button" aria-expanded="false" aria-controls="collapseExample">Click for Company Description</a></h6>' +
+        '<div class="collapse" id="collapseExample' + i + '">' +
+        '<p class="card-text">' + discs[i] + '</p>' +
+        '</div><br>' +
+        '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
+        '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
+        '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+
+      document.getElementById("contactcard").appendChild(card);
+
     }
 
-    var waNumber
-    var waNumberRaw = parseInt(numbers[i], 10);
-    //console.log(waNumberRaw);
-    if (waNumberRaw.toString().length < 12) {
-      waNumber = "91" + waNumberRaw;
-      //console.log(waNumber);
+    if (arrayLength == 0) {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function() {
+        x.className = x.className.replace("show", "");
+      }, 2000);
 
-    } else {
-      waNumber = waNumberRaw;
+
 
     }
-    waNumberFinal = parseInt(waNumber, 10);
-    // console.log(waNumberFinal);
-    card.innerHTML =
+    // document.getElementById("intro").innerHTML = "";
 
-      '<div class="col-md-4  ">' +
-
-      '<div class="thumbnail  ">' +
-
-      '<div class="card shadow-sm" style="width: 18rem;">' +
-      '<div class="card-body">' +
-      '<h5 class="card-title">' + names[i] + ' </h5>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + roles[i] + '</h6>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + companies[i] + ', ' + states[i] + '</h6>' +
-
-      '<h6 class="card-subtitle mb-2 text-muted">' + numbers[i] + '</h6>' +
-      '<h6 class="card-subtitle mb-2 text-muted">' + emails[i] + '</h6>' +
-
-      '<h6 class="card-subtitle mb-2 text-muted"><a  data-toggle="collapse" href="#collapseExample' + i + '"' + ' role="button" aria-expanded="false" aria-controls="collapseExample">Click for Company Description</a></h6>' +
-      '<div class="collapse" id="collapseExample' + i + '">' +
-      '<p class="card-text">' + discs[i] + '</p>' +
-      '</div><br>' +
-
-
-      '<a href="tel:' + numbers[i] + '" class="card-link">Call</a>' +
-      '<a href = "mailto: ' + emails[i] + '" class="card-link">Send Mail</a>' +
-      '<a href="https://wa.me/' + waNumber + '" class="card-link">Whatsapp Text</a>' +
-
-
-
-      '</div>' +
-      '</div>' +
-      '</div>' +
-      '</div>';
-
-    document.getElementById("contactcard").appendChild(card);
-
-  }
-
-  if (arrayLength == 0) {
-    var x = document.getElementById("snackbar");
-    x.className = "show";
-    setTimeout(function() {
-      x.className = x.className.replace("show", "");
-    }, 2000);
-
-
-
-  }
-  // document.getElementById("intro").innerHTML = "";
-
-});
+  });
