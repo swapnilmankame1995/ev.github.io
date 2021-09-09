@@ -27,7 +27,7 @@ function adddata(col) {
   document.getElementById("contactcard").innerHTML = "";
   var name = "Swapnil";
   var data
-  new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet) {
+  new RGraph.Sheets('AIzaSyANrr-djxnWNW0SUVyo0U1509gCbtYkke8','186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI','Form responses 1', function(sheet) {
     var selection = sheet.get(col + 1);
     for (row = 2; data !== null; row++) {
       // loop through all rows in one column
@@ -242,7 +242,7 @@ function adddata(col) {
   //col = selected option from the side menu
   var response = [];
 
-  new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet) {
+  new RGraph.Sheets('AIzaSyANrr-djxnWNW0SUVyo0U1509gCbtYkke8','186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI','Form responses 1', function(sheet) {
     var data = [];
     // console.log("1 " +data);
 

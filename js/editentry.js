@@ -7,7 +7,7 @@ function editResponce() {
   var emailresponce = document.getElementById("InputEmail").value;
   console.log(emailresponce);
 
-  new RGraph.Sheets('186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI', function(sheet) {
+  new RGraph.Sheets('AIzaSyANrr-djxnWNW0SUVyo0U1509gCbtYkke8','186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI','Form responses 1', function(sheet) {
     var data = [];
     for (row = 2; data !== null; row++) {
       // loop through all rows in one column
