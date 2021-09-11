@@ -73,9 +73,12 @@ function editResponce() {
       '</html>';
 
       Email.send({
-        SecureToken: "98a9310f-63fb-4cd8-a644-1b2c3ac954a1",
+        // SecureToken: "98a9310f-63fb-4cd8-a644-1b2c3ac954a1",
+        Host : "smtp25.elasticemail.com",
+        Username : "swapnilum95@gmail.com",
+        Password : "ECBB6E1F170DACFC2F713E2DC21F8DFA5689",
         To: emails[indexpos],
-        From: "swapnilmankame@Evlist.com",
+        From: "swapnil@evsupplierlist.com",
         Subject: "EV list editing link",
         Body: emailBody
 
