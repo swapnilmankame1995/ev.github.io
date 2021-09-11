@@ -10,7 +10,7 @@ function editResponce() {
   new RGraph.Sheets('AIzaSyANrr-djxnWNW0SUVyo0U1509gCbtYkke8','186WP_S-Th-njmMzMCq0dacfMTYU2MPumiT727llCXLI','Form responses 1', function(sheet) {
     var data = [];
     for (row = 2; data !== null; row++) {
-      // loop through all rows in one column
+      // loop through all rows in one column from row number 2
       data = sheet.get("B" + row); //data variable stores all the values from the selected single column
       //traversing through the col until null value is reached, then break from loop
       // console.log(data);
@@ -50,7 +50,7 @@ function editResponce() {
       // console.log(indexpos[x] + 2);
       responceURLs.push(respURl);
     }
-
+    console.log(responceURLs[indexpos]);
     var emailBody =
       '<html>' +
       '<head>' +
@@ -73,7 +73,7 @@ function editResponce() {
       '</html>';
 
       Email.send({
-        SecureToken: "8bb3ffd7-a6ac-4652-8eff-774ee05ed50d",
+        SecureToken: "4389fecb-fed8-4e20-8a92-cd66a859ac0c",
         To: emails[indexpos],
         From: "swapnilmankame@Evlist.com",
         Subject: "EV list editing link",
