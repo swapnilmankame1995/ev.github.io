@@ -73,15 +73,18 @@ function editResponce() {
       '</html>';
 
       Email.send({
-        SecureToken: "4389fecb-fed8-4e20-8a92-cd66a859ac0c",
+        SecureToken: "98a9310f-63fb-4cd8-a644-1b2c3ac954a1",
         To: emails[indexpos],
         From: "swapnilmankame@Evlist.com",
         Subject: "EV list editing link",
         Body: emailBody
+
       }).then(
-        message => alert("Email Sent, Check your registered mail for the edit link")
+        message => alert("Email Sent to " + emails[indexpos] + ", Check your registered mail for the edit link")
+
 
       );
+
 
   });
 
